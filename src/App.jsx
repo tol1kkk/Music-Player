@@ -10,7 +10,7 @@ export default function App() {
             <section className="music_list">
               
             </section>
-              {/* <BrowserRouter> 
+              <BrowserRouter> 
                 <Navbar /> 
                 <Routes> 
                   <Route path='/' element={<Home/>}/> 
@@ -18,7 +18,7 @@ export default function App() {
                   <Route path='/favorites' element={<Favorites/>}/> 
                 </Routes> 
                 <PlayerBar />
-              </BrowserRouter>  */}
+              </BrowserRouter> 
           </main>
         </div>
         
