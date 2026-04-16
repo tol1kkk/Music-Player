@@ -1,6 +1,7 @@
 import Navbar from "./components/Navbar/Navbar.jsx";
 import tracks from "./data/track.js";
 import "./App.css";
+import tracks from "./data/track.js";
 export default function App() {
       return (
         <div className="container">
