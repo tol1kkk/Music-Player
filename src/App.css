@@ -5,5 +5,15 @@
 .container{
   height: 800px;
   width: 100%;
+  background-color: #46511f;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }
-
+.main{
+  width: 65%;
+  height: inherit;
+  display: flex;
+  flex-direction: column;
+  
+}

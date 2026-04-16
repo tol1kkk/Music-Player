@@ -48,3 +48,4 @@ export const tracks = [
         src: "https://mp3tourl.com/audio/1775890684508-f8c0f9d0-c08f-417a-8cef-d80dbe9624bc.m4a"
     },
 ];
+export default tracks;
