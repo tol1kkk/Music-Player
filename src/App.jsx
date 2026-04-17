@@ -1,5 +1,6 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar/Navbar";
+import TrackCard from "./components/trackCard/TrackCard.jsx";
 import Home from "./pages/Home";
 import Search from "./pages/Search";
 import Favorites from "./pages/Favorites";
@@ -9,7 +10,6 @@ export default function App() {
     <BrowserRouter>
       <div className="container">
         <TrackCard/>
-
         <main className="main">
           <div className="header_types"></div>
 
