@@ -19,7 +19,19 @@ export default function TrackCard() {
                 <h3 className="song-author">blablabla</h3>
             </div>
             <div className="controls">
-                
+                <input type="range" className="lenghtSong" />
+                <div className="buttons">
+                    <button className="control-btn">
+                        <img src="./public/rewind.png" alt="" className = "image-controllerPrev"/>
+                    </button>
+                    <button className="control-btn">
+                        <img src="./public/play-button.png" alt="" className = "image-controllerPause-play"/>
+                    </button>
+                    <button className="control-btn">
+                        <img src="./public/next-button.png" alt="" className = "image-controllerNext"/>
+                    </button>
+                </div>
+                <div className="voise-controller"></div>
             </div>
         </div>
     </div> 
