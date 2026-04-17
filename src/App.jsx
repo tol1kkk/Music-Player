@@ -4,7 +4,6 @@ import Home from "./pages/Home";
 import Search from "./pages/Search";
 import Favorites from "./pages/Favorites";
 import "./App.css";
-
 export default function App() {
   return (
     <BrowserRouter>
