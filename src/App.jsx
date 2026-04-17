@@ -9,9 +9,7 @@ export default function App() {
   return (
     <BrowserRouter>
       <div className="container">
-        <aside className="sidebar">
-          <h2>Now Playing</h2>
-        </aside>
+        <TrackCard/>
 
         <main className="main">
           <div className="header_types"></div>
