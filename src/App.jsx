@@ -1,4 +1,5 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { PlayerProvider } from "./context/PlayerContext";
 import Navbar from "./components/Navbar/Navbar";
 import Home from "./pages/Home";
 import Search from "./pages/Search";
@@ -7,26 +8,28 @@ import "./App.css";
 
 export default function App() {
   return (
-    <BrowserRouter>
-      <div className="container">
-        <aside className="sidebar">
-          <h2>Now Playing</h2>
-        </aside>
+    <PlayerProvider>
+      <BrowserRouter>
+        <div className="container">
+          <aside className="sidebar">
+            <h2>Now Playing</h2>
+          </aside>
 
-        <main className="main">
-          <div className="header_types"></div>
+          <main className="main">
+            <div className="header_types"></div>
 
-          <section className="page_content">
-            <Routes>
-              <Route path="/" element={<Home />} />
-              <Route path="/search" element={<Search />} />
-              <Route path="/favorites" element={<Favorites />} />
-            </Routes>
-          </section>
+            <section className="page_content">
+              <Routes>
+                <Route path="/" element={<Home />} />
+                <Route path="/search" element={<Search />} />
+                <Route path="/favorites" element={<Favorites />} />
+              </Routes>
+            </section>
 
-          <Navbar />
-        </main>
-      </div>
-    </BrowserRouter>
+            <Navbar />
+          </main>
+        </div>
+      </BrowserRouter>
+    </PlayerProvider>
   );
 }
