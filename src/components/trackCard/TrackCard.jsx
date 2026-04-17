@@ -14,10 +14,10 @@ export default function TrackCard() {
             </button>
         </div>
         <div className="trackCard-body">
-            <img src="./public/favicon.svg" alt="" className="track-img"/>
+            <img src="./public/image.png" alt="" className="track-img"/>
             <div className="track-info">
-                <h1 className="trackName">Buildings in fire</h1>
-                <h3 className="song-author">blablabla</h3>
+                <h1 className="trackName">Spirit Crusher</h1>
+                <h3 className="song-author">Death</h3>
             </div>
             <div className="controls">
                 <input type="range" className="lenghtSong" />
