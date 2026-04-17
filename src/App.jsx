@@ -1,27 +1,31 @@
-import Navbar from "./components/Navbar/Navbar.jsx";
-import tracks from "./data/track.js";
-import tracks from "./data/track.js";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Navbar from "./components/Navbar/Navbar";
+import Home from "./pages/Home";
+import Search from "./pages/Search";
+import Favorites from "./pages/Favorites";
 import "./App.css";
 export default function App() {
-      return (
-        <div className="container">
-          <TrackCard/>
-          <main className="main">
-            <div className="header_types"></div>
-            <section className="music_list">
-              
-            </section>
-            <Navbar/>
-          </main>
-        </div>
-        // <BrowserRouter> 
-        //   <Navbar /> 
-        //   <Routes> 
-        //     <Route path='/' element={<Home/>}/> 
-        //     <Route path='/search' element={<Search/>}/> 
-        //     <Route path='/favorites' element={<Favorites/>}/> 
-        //   </Routes> 
-        //   <PlayerBar />
-        // </BrowserRouter> 
-      );
+  return (
+    <BrowserRouter>
+      <div className="container">
+        <aside className="sidebar">
+          <h2>Now Playing</h2>
+        </aside>
+
+        <main className="main">
+          <div className="header_types"></div>
+
+          <section className="page_content">
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/search" element={<Search />} />
+              <Route path="/favorites" element={<Favorites />} />
+            </Routes>
+          </section>
+
+          <Navbar />
+        </main>
+      </div>
+    </BrowserRouter>
+  );
 }

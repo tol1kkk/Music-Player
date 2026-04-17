@@ -1,1 +1,7 @@
-<h1>Home</h1>
+export default function Home() {
+  return (
+    <div>
+      Home page
+    </div>
+  );
+}

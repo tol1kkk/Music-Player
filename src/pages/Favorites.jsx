@@ -1,1 +1,7 @@
-<h1>Favourites</h1>
+export default function Favorites() {
+  return (
+    <div>
+      Favorites page
+    </div>
+  );
+}
