@@ -1,5 +1,5 @@
 import "./trackCard.css";
-import { useContext } from "react";
+import { useContext, useRef, useEffect, useState } from "react";
 import { PlayerContext } from "../../context/PlayerContext";
 
 export default function TrackCard() {
@@ -13,6 +13,21 @@ export default function TrackCard() {
     volume,
     setVolume,
   } = useContext(PlayerContext);
+
+  const audioRef = useRef(null);
+  const [progress, setProgress] = useState(35);
+
+  useEffect(() => {
+    if (!audioRef.current) return;
+
+    audioRef.current.volume = volume;
+
+    if (isPlaying) {
+      audioRef.current.play();
+    } else {
+      audioRef.current.pause();
+    }
+  }, [isPlaying, currentTrack, volume]);
 
   if (!currentTrack) {
     return (
@@ -32,6 +47,8 @@ export default function TrackCard() {
 
   return (
     <div className="track-card">
+      <audio ref={audioRef} src={currentTrack.src} />
+
       <div className="trackCard-header">
         <button className="options active">Зараз</button>
         <button className="options">Черга</button>
@@ -62,8 +79,8 @@ export default function TrackCard() {
             type="range"
             min="0"
             max="100"
-            value={35}
-            readOnly
+            value={progress}
+            onChange={(e) => setProgress(Number(e.target.value))}
             className="lenghtSong"
           />
 
