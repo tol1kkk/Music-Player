@@ -13,7 +13,7 @@ export default function App() {
         <div className="container">
           <TrackCard/>
         <main className="main">
-          <div className="header_types"></div>
+         
 
           <section className="page_content">
             <Routes>
