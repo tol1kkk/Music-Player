@@ -1,8 +1,10 @@
 import { createContext, useState } from "react";
+import { tracks } from "../data/track";
+
 export const PlayerContext = createContext();
 export function PlayerProvider({ children }){
     // ПІСНЯ ЯКА ГРАЄ НА ДАНИЙ МОМЕНТ
-    const [currentTrack, setCurrentTrack] = useState(null);
+    const [currentTrack, setCurrentTrack] = useState(tracks[0]);
     // ПІСНЯ ГРАЄ АБО НІ 
     const [isPlaying, setIsPlaying] = useState(false);
     // ЗВУК МУЗИКИ
@@ -11,19 +13,46 @@ export function PlayerProvider({ children }){
     const [favorites, setFavorites] = useState([]);
 
     // ГРАТИ
-    const playTrack = () => {};
+    const playTrack = (track) => {
+        setCurrentTrack(track);
+        setIsPlaying(true);
+    };
     // ПАУЗА
-    const pauseTrack = () => {};
+    const pauseTrack = () => {
+        setIsPlaying(false)
+    };
     // НАСТУПНА
-    const nextTrack = () => {};
+    const nextTrack = () => {
+        if(!currentTrack) return;
+
+        const idx = tracks.findIndex((t) => t.id === currentTrack.id);
+        const next = tracks[(idx + 1) % tracks.length];
+
+        setCurrentTrack(next);
+        setIsPlaying(true);
+    };
     // ПОПЕРЕДНЯ
-    const prevTrack = () => {};
+    const prevTrack = () => {
+        if(!currentTrack) return;
+
+        const idx = tracks.findIndex((t) => t.id === currentTrack.id);
+        const prev = tracks[(idx - 1 + tracks.length) % tracks.length];
+
+        setCurrentTrack(prev);
+        setIsPlaying(true);
+    };
     // ЗВУК
-    const setVolume = () => {};
+    const setVolume = (v) => {
+        setVolumeState(v);
+    };
     // УЛЮБЛЕНЕ
-    const addToFavorites = () => {};
+    const addToFavorites = (track) => {
+        setFavorites((prev) => [...prev, track]);
+    };
     // НЕУЛЮЬЛЕНЕ
-    const removeFromFavorites = () => {};
+    const removeFromFavorites = (id) => {
+        setFavorites((prev) => prev.filter((t) => t.id !== id));
+    };
 
     return (
         <PlayerContext.Provider value={{ 
