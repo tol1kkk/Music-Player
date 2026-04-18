@@ -40,7 +40,7 @@ export default function TrackCard() {
 
       <div className="trackCard-body">
         <img
-          src={currentTrack.cover}
+          src={track.cober}
           alt={currentTrack.title}
           className="track-img"
         />
