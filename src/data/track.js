@@ -47,5 +47,37 @@ export const tracks = [
         cober: "https://i.pinimg.com/736x/5a/2c/90/5a2c907907574033dc19021052afc0e8.jpg",
         src: "https://mp3tourl.com/audio/1775890684508-f8c0f9d0-c08f-417a-8cef-d80dbe9624bc.m4a"
     },
+    {
+        id: 7,
+        title: "Feel good",
+        artist: "clara la san",
+        album: "Album 6",
+        cober: "https://i.pinimg.com/736x/5a/2c/90/5a2c907907574033dc19021052afc0e8.jpg",
+        src: "https://mp3tourl.com/audio/1775890684508-f8c0f9d0-c08f-417a-8cef-d80dbe9624bc.m4a"
+    },
+    {
+        id: 8,
+        title: "Feel good",
+        artist: "clara la san",
+        album: "Album 6",
+        cober: "https://i.pinimg.com/736x/5a/2c/90/5a2c907907574033dc19021052afc0e8.jpg",
+        src: "https://mp3tourl.com/audio/1775890684508-f8c0f9d0-c08f-417a-8cef-d80dbe9624bc.m4a"
+    },
+    {
+        id: 9,
+        title: "Feel good",
+        artist: "clara la san",
+        album: "Album 6",
+        cober: "https://i.pinimg.com/736x/5a/2c/90/5a2c907907574033dc19021052afc0e8.jpg",
+        src: "https://mp3tourl.com/audio/1775890684508-f8c0f9d0-c08f-417a-8cef-d80dbe9624bc.m4a"
+    },
+    {
+        id: 10,
+        title: "Feel good",
+        artist: "clara la san",
+        album: "Album 6",
+        cober: "https://i.pinimg.com/736x/5a/2c/90/5a2c907907574033dc19021052afc0e8.jpg",
+        src: "https://mp3tourl.com/audio/1775890684508-f8c0f9d0-c08f-417a-8cef-d80dbe9624bc.m4a"
+    },
 ];
 export default tracks;
