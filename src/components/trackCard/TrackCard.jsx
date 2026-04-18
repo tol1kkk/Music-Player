@@ -15,7 +15,7 @@ export default function TrackCard() {
   } = useContext(PlayerContext);
 
   const audioRef = useRef(null);
-  const [progress, setProgress] = useState(35);
+  const [progress, setProgress] = useState(0);
 
   useEffect(() => {
     if (!audioRef.current) return;
