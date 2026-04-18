@@ -1,17 +1,17 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { PlayerProvider } from "./context/PlayerContext";
 import Navbar from "./components/Navbar/Navbar";
+import TrackCard from "./components/trackCard/TrackCard.jsx";
 import Home from "./pages/Home";
 import Search from "./pages/Search";
 import Favorites from "./pages/Favorites";
 import "./App.css";
 export default function App() {
   return (
-    <BrowserRouter>
-      <div className="container">
-        <aside className="sidebar">
-          <h2>Now Playing</h2>
-        </aside>
-
+    <PlayerProvider>
+      <BrowserRouter>
+        <div className="container">
+          <TrackCard/>
         <main className="main">
           <div className="header_types"></div>
 
@@ -25,7 +25,8 @@ export default function App() {
 
           <Navbar />
         </main>
-      </div>
-    </BrowserRouter>
+        </div>
+      </BrowserRouter>
+    </PlayerProvider>
   );
 }
