@@ -1,10 +1,10 @@
 import { createContext, useState } from "react";
-import tracks from "../data/track";
+import { tracks } from "../data/track";
 
 export const PlayerContext = createContext();
 export function PlayerProvider({ children }){
     // ПІСНЯ ЯКА ГРАЄ НА ДАНИЙ МОМЕНТ
-    const [currentTrack, setCurrentTrack] = useState(null);
+    const [currentTrack, setCurrentTrack] = useState(tracks[0]);
     // ПІСНЯ ГРАЄ АБО НІ 
     const [isPlaying, setIsPlaying] = useState(false);
     // ЗВУК МУЗИКИ
