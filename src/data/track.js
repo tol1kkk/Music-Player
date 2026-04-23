@@ -47,37 +47,78 @@ export const tracks = [
         cover: "/public/FeelGood.jpg",
         src: "https://mp3tourl.com/audio/1775890684508-f8c0f9d0-c08f-417a-8cef-d80dbe9624bc.m4a"
     },
+    // dsdae
     {
         id: 7,
-        title: "Feel good",
-        artist: "clara la san",
+        title: "Leopard flowers",
+        artist: "Death in june",
         album: "Album 6",
-        cober: "https://i.pinimg.com/736x/5a/2c/90/5a2c907907574033dc19021052afc0e8.jpg",
-        src: "https://mp3tourl.com/audio/1775890684508-f8c0f9d0-c08f-417a-8cef-d80dbe9624bc.m4a"
+        cober: "/public/deathInJune.jpg",
+        src: "https://mp3tourl.com/audio/1776965179401-f8532be3-0cf4-468e-bc64-4f05edebaeba.m4a"
     },
     {
         id: 8,
-        title: "Feel good",
-        artist: "clara la san",
+        title: "Black hole sun",
+        artist: "Soundgarden ",
         album: "Album 6",
-        cober: "https://i.pinimg.com/736x/5a/2c/90/5a2c907907574033dc19021052afc0e8.jpg",
-        src: "https://mp3tourl.com/audio/1775890684508-f8c0f9d0-c08f-417a-8cef-d80dbe9624bc.m4a"
+        cober: "/public/soundgarden.jpg",
+        src: "https://mp3tourl.com/audio/1776965212884-adfc29cf-d838-4590-b73f-ae0ed5b26ecd.m4a"
     },
     {
         id: 9,
-        title: "Feel good",
-        artist: "clara la san",
+        title: "evil dead",
+        artist: "death ",
         album: "Album 6",
-        cober: "https://i.pinimg.com/736x/5a/2c/90/5a2c907907574033dc19021052afc0e8.jpg",
-        src: "https://mp3tourl.com/audio/1775890684508-f8c0f9d0-c08f-417a-8cef-d80dbe9624bc.m4a"
+        cober: "/public/death.jpg",
+        src: "https://mp3tourl.com/audio/1776965231213-79b64972-dc2b-42af-a2a7-09273e06fc7c.m4a"
     },
     {
         id: 10,
-        title: "Feel good",
-        artist: "clara la san",
+        title: "Someday",
+        artist: "Dj@Work ",
         album: "Album 6",
-        cober: "https://i.pinimg.com/736x/5a/2c/90/5a2c907907574033dc19021052afc0e8.jpg",
-        src: "https://mp3tourl.com/audio/1775890684508-f8c0f9d0-c08f-417a-8cef-d80dbe9624bc.m4a"
+        cober: "/public/djWork.jpg",
+        src: "https://mp3tourl.com/audio/1776965246015-183a44a6-c2e9-4947-8629-b2d2f8f3918a.m4a"
+    },
+    {
+        id: 11,
+        title: "drugs",
+        artist: "sonic mine",
+        album: "Album 6",
+        cober: "/public/sonicMine.jpg",
+        src: "https://mp3tourl.com/audio/1776965272753-a52e287b-ea61-4451-87fa-fb3ea1ee2099.m4a"
+    },
+    {
+        id: 12,
+        title: "bailando",
+        artist: "paradisio ",
+        album: "Album 6",
+        cober: "/public/paradisio.jpg",
+        src: "https://mp3tourl.com/audio/1776965291389-844a046e-0dd8-4278-ae2e-7a6626d76f1a.m4"
+    },
+    {
+        id: 13,
+        title: "Blue(Da Ba Dee)",
+        artist: "Eiffel 65, Gabry Ponte ",
+        album: "Album 6",
+        cober: "/public/bluee.jpg",
+        src: "https://mp3tourl.com/audio/1776965305086-5ad83afe-67ce-410e-ba87-1987c2da3408.m4a"
+    },
+    {
+        id: 14,
+        title: "Still loving you",
+        artist: "Scorpions",
+        album: "Album 6",
+        cober: "/public/scorpions.jpg",
+        src: "https://mp3tourl.com/audio/1776965331499-a53cfb52-cacb-4feb-8a09-73bd4b33695f.m4a"
+    },
+    {
+        id: 15,
+        title: "Demons and diamonds",
+        artist: "Powerwolf",
+        album: "Album 6",
+        cober: "/public/powerwolf.jpg",
+        src: "https://mp3tourl.com/audio/1776965360870-ffda7aac-cdeb-4912-952d-2916fa08d342.mp3"
     },
 ];
 export default tracks;
