@@ -10,31 +10,31 @@ export const tracks = [
     {
         id: 2,
         title: "Парфум",
-        artist: "second part",
+        artist: "Second part",
         album: "Album 2",
         cover: "/public/Парфум.png",
         src: "https://mp3tourl.com/audio/1775890773267-a494354f-ab9d-4630-914b-3f01b2d0dd8e.m4a"
     },
     {
         id: 3,
-        title: "the chair",
-        artist: "the 69 eyes",
+        title: "The chair",
+        artist: "The 69 eyes",
         album: "Album 3",
         cover: "/public/TheChair.jpg",
         src: "https://mp3tourl.com/audio/1775890803439-eb4320f2-5218-4cb6-88ad-41ded7fa6f95.m4a"
     },
     {
         id: 4,
-        title: "solo",
-        artist: "future ",
+        title: "Solo",
+        artist: "Future ",
         album: "Album 4",
         cover: "/public/solo.jpg",
         src: "https://mp3tourl.com/audio/1775890719764-baf389ef-fb96-44c7-8060-6f6b6d5a499c.m4a"
     },
     {
         id: 5,
-        title: "rolling stone",
-        artist: "brent Feiyaz",
+        title: "Rolling stone",
+        artist: "Brent Feiyaz",
         album: "Album 5",
         cover: "/public/RollingStone.jpg",
         src: "https://mp3tourl.com/audio/1775890628304-5f1722fb-d206-435c-9fb2-62edae160588.m4a"
@@ -66,8 +66,8 @@ export const tracks = [
     },
     {
         id: 9,
-        title: "evil dead",
-        artist: "death ",
+        title: "Evil dead",
+        artist: "Death ",
         album: "Album 6",
         cober: "/public/death.jpg",
         src: "https://mp3tourl.com/audio/1776965231213-79b64972-dc2b-42af-a2a7-09273e06fc7c.m4a"
@@ -82,16 +82,16 @@ export const tracks = [
     },
     {
         id: 11,
-        title: "drugs",
-        artist: "sonic mine",
+        title: "Drugs",
+        artist: "Sonic mine",
         album: "Album 6",
         cober: "/public/sonicMine.jpg",
         src: "https://mp3tourl.com/audio/1776965272753-a52e287b-ea61-4451-87fa-fb3ea1ee2099.m4a"
     },
     {
         id: 12,
-        title: "bailando",
-        artist: "paradisio ",
+        title: "Bailando",
+        artist: "Paradisio ",
         album: "Album 6",
         cober: "/public/paradisio.jpg",
         src: "https://mp3tourl.com/audio/1776965291389-844a046e-0dd8-4278-ae2e-7a6626d76f1a.m4"
