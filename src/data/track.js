@@ -4,7 +4,7 @@ export const tracks = [
         title: "Spirit Crusher",
         artist: "Death",
         album: "Album 1",
-        cover: "/public/SpiritCrusher.jpg",
+        cober: "/public/SpiritCrusher.jpg",
         src: "https://mp3tourl.com/audio/1775890745312-e3c558aa-e00b-409b-86e9-7b6057efd93d.m4a"
     },
     {
@@ -12,7 +12,7 @@ export const tracks = [
         title: "Парфум",
         artist: "Second part",
         album: "Album 2",
-        cover: "/public/Парфум.png",
+        cober: "/public/Парфум.png",
         src: "https://mp3tourl.com/audio/1775890773267-a494354f-ab9d-4630-914b-3f01b2d0dd8e.m4a"
     },
     {
@@ -20,7 +20,7 @@ export const tracks = [
         title: "The chair",
         artist: "The 69 eyes",
         album: "Album 3",
-        cover: "/public/TheChair.jpg",
+        cober: "/public/TheChair.jpg",
         src: "https://mp3tourl.com/audio/1775890803439-eb4320f2-5218-4cb6-88ad-41ded7fa6f95.m4a"
     },
     {
@@ -28,7 +28,7 @@ export const tracks = [
         title: "Solo",
         artist: "Future ",
         album: "Album 4",
-        cover: "/public/solo.jpg",
+        cober: "/public/solo.jpg",
         src: "https://mp3tourl.com/audio/1775890719764-baf389ef-fb96-44c7-8060-6f6b6d5a499c.m4a"
     },
     {
@@ -36,7 +36,7 @@ export const tracks = [
         title: "Rolling stone",
         artist: "Brent Feiyaz",
         album: "Album 5",
-        cover: "/public/RollingStone.jpg",
+        cober: "/public/RollingStone.jpg",
         src: "https://mp3tourl.com/audio/1775890628304-5f1722fb-d206-435c-9fb2-62edae160588.m4a"
     },
     {
@@ -44,7 +44,7 @@ export const tracks = [
         title: "Feel good",
         artist: "clara la san",
         album: "Album 6",
-        cover: "/public/FeelGood.jpg",
+        cober: "/public/FeelGood.jpg",
         src: "https://mp3tourl.com/audio/1775890684508-f8c0f9d0-c08f-417a-8cef-d80dbe9624bc.m4a"
     },
     // dsdae

@@ -123,7 +123,7 @@ export default function TrackCard() {
         <div className="trackCard-body">
           <div className="cover-wrap">
             <img
-              src={currentTrack.cover}
+              src={currentTrack.cober}
               alt={currentTrack.title}
               className="track-img"
             />
