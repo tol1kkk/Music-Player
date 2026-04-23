@@ -17,7 +17,6 @@ export default function App() {
           </aside>
 
           <main className="main">
-            <div className="header_types"></div>
 
             <section className="page_content">
               <Routes>
