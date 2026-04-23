@@ -12,12 +12,9 @@ export default function App() {
     <PlayerProvider>
       <BrowserRouter>
         <div className="container">
-          <aside className="sidebar">
-            <TrackCard />
-          </aside>
-
+          <TrackCard />
           <main className="main">
-            <div className="header_types"></div>
+            {/* <div className="header_types"></div> */}
 
             <section className="page_content">
               <Routes>
