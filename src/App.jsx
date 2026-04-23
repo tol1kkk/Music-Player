@@ -12,12 +12,8 @@ export default function App() {
     <PlayerProvider>
       <BrowserRouter>
         <div className="container">
-          <aside className="sidebar">
-            <TrackCard />
-          </aside>
-
+          <TrackCard />
           <main className="main">
-
             <section className="page_content">
               <Routes>
                 <Route path="/" element={<Home />} />
