@@ -7,7 +7,7 @@
 .track-card {
   width: 100%;
   max-width: 470px;
-  min-height: 760px;
+  height: 100vh;
   background: linear-gradient(180deg, #010221 0%, #071133 100%);
   position: relative;
   overflow: hidden;
