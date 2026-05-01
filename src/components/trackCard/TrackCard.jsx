@@ -73,8 +73,6 @@ export default function TrackCard() {
   }, [currentTrack, nextTrack]);
 
   const handlePlayPause = () => {
-    if (!currentTrack) return;
-
     if (isPlaying) {
       pauseTrack();
     } else {
@@ -116,7 +114,7 @@ export default function TrackCard() {
       <div className="player-glow player-glow-two"></div>
 
       <div className="container_track-card">
-        <audio ref={audioRef} src={currentTrack.src} preload="metadata" />
+        <audio ref={audioRef} src={currentTrack.src} />
 
         <div className="trackCard-header">
           <button className="options active">Зараз</button>
@@ -127,7 +125,7 @@ export default function TrackCard() {
         <div className="trackCard-body">
           <div className="cover-wrap">
             <img
-              src={currentTrack.cover}
+              src={currentTrack.cober}
               alt={currentTrack.title}
               className="track-img"
             />
@@ -169,18 +167,19 @@ export default function TrackCard() {
               <button className="mini-btn">⇄</button>
 
               <button className="control-btn small" onClick={prevTrack}>
-                ⏮️
+                ⏮
               </button>
 
               <button
                 className="control-btn play-btn"
                 onClick={handlePlayPause}
               >
-                {isPlaying ? "⏸️" : "▶️"}
+
+                {isPlaying ? "⏸" : "▶"}
               </button>
 
               <button className="control-btn small" onClick={nextTrack}>
-                ⏭️
+                ⏭
               </button>
 
               <button className="mini-btn">↻</button>
