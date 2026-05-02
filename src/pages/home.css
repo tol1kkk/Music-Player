@@ -80,3 +80,7 @@
     align-items: center;
     justify-content: space-evenly;
 }
+.liked{
+    height: 30px;
+    width: 30px;
+}

@@ -1,6 +1,6 @@
 import "./home.css";
 import tracks from "../data/track.js";
-export default function Home() {
+export default function Home({tracks, addToFavorites}) {
   return (
     <div className="home_container">
        <div className="header_types">
@@ -21,6 +21,7 @@ export default function Home() {
                     <h3 className="track_title">{track.title}</h3>
                     <p className="track_artist">{track.artist}</p>
                 </div>
+                <img src="/public/heart-love.png" alt="" className="liked" onClick={()=> addToFavorites(track)}/>
             </div>
           ))}
 
