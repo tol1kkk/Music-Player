@@ -4,19 +4,34 @@ import "./navbar.css";
 export default function Navbar() {
   return (
     <nav className="navbar">
-      <NavLink to="/" className="navbar__link">
-      <img src="./public/home-button.png" alt="" className="link-img"/>
-        Home
+      <NavLink
+        to="/"
+        className={({ isActive }) =>
+          isActive ? "navbar__link active" : "navbar__link"
+        }
+      >
+        <img src="./public/home.png" alt="" className="link-img" />
+        <span>Home</span>
       </NavLink>
 
-      <NavLink to="/search" className="navbar__link">
-      <img src="./public/search.png" alt="" className="link-img"/>
-        Search
+      <NavLink
+        to="/search"
+        className={({ isActive }) =>
+          isActive ? "navbar__link active" : "navbar__link"
+        }
+      >
+        <img src="./public/search.png" alt="" className="link-img" />
+        <span>Search</span>
       </NavLink>
 
-      <NavLink to="/favorites" className="navbar__link">
-      <img src="./public/heart-love.png" alt="" className="link-img"/>
-        Favorites
+      <NavLink
+        to="/favorites"
+        className={({ isActive }) =>
+          isActive ? "navbar__link active" : "navbar__link"
+        }
+      >
+        <img src="./public/heart.png" alt="" className="link-img" />
+        <span>Favorites</span>
       </NavLink>
     </nav>
   );

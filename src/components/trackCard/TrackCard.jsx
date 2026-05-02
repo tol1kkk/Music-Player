@@ -26,7 +26,9 @@ export default function TrackCard() {
     audioRef.current.volume = volume;
 
     if (isPlaying) {
-      audioRef.current.play();
+      audioRef.current.play().catch((error) => {
+        console.log("Audio play error:", error);
+      });
     } else {
       audioRef.current.pause();
     }
@@ -172,6 +174,7 @@ export default function TrackCard() {
                 className="control-btn play-btn"
                 onClick={handlePlayPause}
               >
+
                 {isPlaying ? "⏸" : "▶"}
               </button>
 
