@@ -1,6 +1,11 @@
 import "./home.css";
+import { useContext } from "react";
+import { PlayerContext } from "../context/PlayerContext.jsx"
 import tracks from "../data/track.js";
 export default function Home() {
+
+  const { playTrack } = useContext(PlayerContext);
+
   return (
     <div className="home_container">
        <div className="header_types">
@@ -14,7 +19,7 @@ export default function Home() {
        </div>
         <div className="tracks_container">
           {tracks.map((track) => (
-            <div className="track_card" key={track.id}>
+            <div className="track_card" key={track.id} onClick={() => playTrack(track)}>
                 <h3 className="number">{track.id}</h3>
                 <img src={track.cober} alt={track.title} className="track_cover" />
                 <div className="track_info">
