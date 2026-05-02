@@ -21,7 +21,7 @@ body {
   width: 100%;
   display: flex;
   flex-direction: row;
-  background: #B7BF99;
+  background: linear-gradient(180deg, #010221 0%, #071133 100%);
 }
 
 .sidebar {
@@ -33,7 +33,10 @@ body {
 }
 
 .main {
-  flex: 1;
+  /* flex: 1; */
+  height: 100vh;
+  display: flex;
+  width: 100%;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -47,12 +50,13 @@ body {
 }
 
 .page_content {
-  flex: 1;
+  /* flex: 1; */
+
   width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  padding: 10px 0 24px;
+  /* padding: 10px 0 24px; */
   overflow: hidden;
 }
 
