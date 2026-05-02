@@ -11,7 +11,8 @@ import { useState } from "react";
 
 export default function App() {
   const [favorites, setFavorites] = useState([]);
-const addToFavorites = (song) => {
+
+  const addToFavorites = (song) => {
   setFavorites((prevFavorites) => {
     if (!prevFavorites.some((item) => item.id === song.id)) {
       return [...prevFavorites, song];

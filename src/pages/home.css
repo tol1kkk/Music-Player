@@ -81,6 +81,11 @@
     justify-content: space-evenly;
 }
 .liked{
+    opacity: 0;
+    transition: 0.2s;
     height: 30px;
     width: 30px;
+}
+.track_card:hover .liked{
+    opacity: 1;
 }

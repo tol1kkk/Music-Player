@@ -24,7 +24,7 @@ export default function Home({tracks, addToFavorites}) {
                     <h3 className="track_title">{track.title}</h3>
                     <p className="track_artist">{track.artist}</p>
                 </div>
-                <img src="/public/heart-love.png" alt="" className="liked" onClick={(e) => {e.stopPropagation(); addToFavorites(track);}}/>
+                <img src="/heart.png" alt="" className="liked" onClick={(e) => {e.stopPropagation(); addToFavorites(track);}}/>
             </div>
           ))}
 
