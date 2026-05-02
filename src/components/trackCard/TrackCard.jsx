@@ -116,12 +116,6 @@ export default function TrackCard() {
       <div className="container_track-card">
         <audio ref={audioRef} src={currentTrack.src} />
 
-        <div className="trackCard-header">
-          <button className="options active">Зараз</button>
-          <button className="options">Черга</button>
-          <button className="options">Текст</button>
-        </div>
-
         <div className="trackCard-body">
           <div className="cover-wrap">
             <img
