@@ -5,43 +5,50 @@ import tracks from "../data/track.js";
 export default function Search() {
   const [query, setQuery] = useState("");
 
-  const filteredTracks = tracks.filter((track) =>
-    track.title.toLowerCase().includes(query.toLowerCase()) ||
-    track.artist.toLowerCase().includes(query.toLowerCase())
+  const normalizedQuery = query.toLowerCase().trim();
+
+  const filteredTracks = tracks.filter(
+    (track) =>
+      track.title.toLowerCase().includes(normalizedQuery) ||
+      track.artist.toLowerCase().includes(normalizedQuery),
   );
 
-  const showTracks = query ? filteredTracks : tracks;
+  const showTracks = normalizedQuery ? filteredTracks : tracks;
 
   return (
     <div className="search-page">
-      
-      {/* 🔍 SEARCH INPUT */}
+      {/* 🔍 SEARCH */}
       <div className="search-box">
+        <span className="search-icon">🔍</span>
         <input
           type="text"
-          placeholder="Search songs or artists..."
+          placeholder="Search songs, artists..."
           value={query}
           onChange={(e) => setQuery(e.target.value)}
         />
+        {query && (
+          <button className="clear-btn" onClick={() => setQuery("")}>
+            ✖
+          </button>
+        )}
       </div>
 
-      {/* 🧠 TITLE */}
+      {/* TITLE */}
       <h2 className="search-title">
         {query ? "Search results" : "Recommended"}
       </h2>
 
-      {/* 🎵 LIST */}
+      {/* LIST */}
       <div className="tracks-list">
         {showTracks.length === 0 ? (
           <p className="empty-text">No tracks found</p>
         ) : (
           showTracks.map((track, index) => (
             <div key={track.id} className="track-row">
-              
               <span className="track-index">{index + 1}</span>
 
               <div className="track-main">
-                <div className="track-cover"></div>
+                <img src={track.cober} alt={track.title} className="track_cover" />
                 <div>
                   <p className="track-title">{track.title}</p>
                   <p className="track-artist">{track.artist}</p>
