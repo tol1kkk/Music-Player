@@ -1,8 +1,12 @@
 import { useState } from "react";
+import { useContext } from "react";
 import "./search.css";
 import tracks from "../data/track.js";
+import { PlayerContext } from "../context/PlayerContext.jsx"
 
 export default function Search() {
+  const { playTrack } = useContext(PlayerContext);
+  
   const [query, setQuery] = useState("");
 
   const normalizedQuery = query.toLowerCase().trim();
@@ -44,7 +48,7 @@ export default function Search() {
           <p className="empty-text">No tracks found</p>
         ) : (
           showTracks.map((track, index) => (
-            <div key={track.id} className="track-row">
+            <div key={track.id} className="track-row" onClick={() => playTrack(track)}>
               <span className="track-index">{index + 1}</span>
 
               <div className="track-main">
