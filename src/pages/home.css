@@ -9,6 +9,7 @@
   flex-direction: column;
 }
 
+
 /* HEADER */
 
 .header_types {
@@ -32,12 +33,19 @@
 
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
 }
+.logo_our{
+  font-family: "Rubik Glitch", system-ui;
+  font-weight: 400;
+  font-style: italic;
+  font-size: 45px;
+  color:#BC3203;
+}
 
-.header_types h1 {
+/* .header_types h1 {
   font-size: 24px;
   font-weight: 800;
   color: #ffffff;
-}
+} */
 
 /* BUTTONS */
 
@@ -194,7 +202,7 @@
   cursor: pointer;
 }
 
-.liked:hover {
+.track_card:hover .liked{
    opacity: 1;
   transform: scale(1);
 }
@@ -224,10 +232,11 @@
     color: rgb(255, 255, 255);
     /* border-bottom: 2px solid #0A7368; */
 }
-.track_card:hover{
-    background-color: #0A7368;
-    cursor: pointer;
-    border-radius: 10px;
+.track_card:hover {
+  background: rgba(255, 255, 255, 0.09);
+  transform: scale(1.01);
+  border-color: rgba(255, 255, 255, 0.1);
+  border: 1px solid #0A7373;
 }
 .track_cover{
     height: 70px;
@@ -243,22 +252,18 @@
     justify-content: space-evenly;
 }
 .liked{
-    opacity: 0;
+    opacity: 1;
     transition: 0.2s;
     height: 30px;
     width: 30px;
 }
-.track_card:hover .liked{
+/* .track_card:hover .liked{
     opacity: 1;
+}; */
 }
-=======
-    align-items: flex-start;
-  }
-
-  .buttons_types {
+  /* .buttons_types {
     width: 100%;
-  }
-}
+  } */
 
 /* MOBILE */
 
@@ -297,4 +302,4 @@
   .track_artist {
     font-size: 12px;
   }
-}   
+}

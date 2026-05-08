@@ -8,17 +8,48 @@ import Favorites from "./pages/Favorites";
 import "./App.css";
 import tracks from "./data/track";
 import { useState } from "react";
+import { useEffect } from "react";
 
 export default function App() {
-  const [favorites, setFavorites] = useState([]);
+//   const [favorites, setFavorites] = useState([]);
 
-  const addToFavorites = (song) => {
+//   const addToFavorites = (song) => {
+//   setFavorites((prevFavorites) => {
+//     if (!prevFavorites.some((item) => item.id === song.id)) {
+//       return [...prevFavorites, song];
+//     }    return prevFavorites;
+//   });
+// }
+const [favorites, setFavorites] = useState(() => {
+  return JSON.parse(localStorage.getItem("favorites")) || [];
+});
+
+useEffect(() => {
+  localStorage.setItem("favorites", JSON.stringify(favorites));
+}, [favorites]);
+
+// const addToFavorites = (song) => {
+//   setFavorites((prevFavorites) => {
+//     if (!prevFavorites.some((item) => item.id === song.id)) {
+//       return [...prevFavorites, song];
+//     }
+//     return prevFavorites;
+//   });
+// };
+
+const toggleFavorite = (song) => {
   setFavorites((prevFavorites) => {
-    if (!prevFavorites.some((item) => item.id === song.id)) {
+    const isFavorite = prevFavorites.some((item) => item.id === song.id);
+    if (isFavorite) {
+      return prevFavorites.filter((item) => item.id !== song.id);
+    } else {
       return [...prevFavorites, song];
-    }    return prevFavorites;
-  });
+    }
+  })
 }
+  const isSongFavorite = (id) => {
+    return favorites.some((song) => song.id === id);
+  }
   return (
     <PlayerProvider>
       <BrowserRouter>
@@ -27,9 +58,9 @@ export default function App() {
           <main className="main">
             <section className="page_content">
               <Routes>
-                <Route path="/" element={<Home tracks={tracks} addToFavorites={addToFavorites} />} />
+                <Route path="/" element={<Home tracks={tracks} toggleFavorite={toggleFavorite} favorites={favorites} />} />
                 <Route path="/search" element={<Search />} />
-                <Route path="/favorites" element={<Favorites favorites={favorites} />} />
+                <Route path="/favorites" element={<Favorites favorites={favorites} toggleFavorite={toggleFavorite} />} />
               </Routes>
             </section>
 
