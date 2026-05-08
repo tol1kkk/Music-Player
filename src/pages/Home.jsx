@@ -7,7 +7,7 @@ export default function Home({tracks, toggleFavorite, favorites}) {
   return (
     <div className="home_container">
        <div className="header_types">
-          <h1 className="logo_our">SoundKiller</h1>
+          <h1 className="logo_our">Sound-<span className="logo_1">AT220</span></h1>
           <div className="buttons_types">
             <button className="home_button">Всі</button>
             <button className="home_button">поп</button>
