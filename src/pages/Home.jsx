@@ -1,13 +1,13 @@
 import "./home.css";
 import { useContext } from "react";
 import { PlayerContext } from "../context/PlayerContext.jsx"
-export default function Home({tracks, addToFavorites}) {
+export default function Home({tracks, toggleFavorite, favorites}) {
 
  const { playTrack } = useContext(PlayerContext);
   return (
     <div className="home_container">
        <div className="header_types">
-          <h1>New Releases</h1>
+          <h1 className="logo_our">SoundKiller</h1>
           <div className="buttons_types">
             <button className="home_button">Всі</button>
             <button className="home_button">поп</button>
@@ -24,7 +24,17 @@ export default function Home({tracks, addToFavorites}) {
                     <h3 className="track_title">{track.title}</h3>
                     <p className="track_artist">{track.artist}</p>
                 </div>
-                <img src="/heart.png" alt="" className="liked" onClick={(e) => {e.stopPropagation(); addToFavorites(track);}}/>
+                <img src={
+                  favorites.some((item) => item.id === track.id)
+                    ? "/heart-filled.png"
+                    : "/heart.png"
+                  }
+                  alt="Like "
+                  className="liked"
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    toggleFavorite(track);
+                }}/>
             </div>
           ))}
 
